@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Chart with Circle Markers</title>
+    <script src="Line%20Chart%20with%20Circle%20Markers_files/chart.js"></script>
+</head>
+<body>
+
+    <canvas id="flowChart" style="display: block; box-sizing: border-box; height: 602px; width: 1204px;" width="1204" height="602"></canvas>
+
+    <script>
+        const ctx = document.getElementById('flowChart').getContext('2d');
+
+        const flowChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [
+                    {
+                        label: 'Dataset 1',
+                        data: [10, 15, 8, 20, 25, 30],
+                        borderColor: 'blue',
+                        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                        borderWidth: 4,
+                        fill: true,
+                        tension: 0.4 // Enlarges on hover
+                    },
+                    {
+                        label: 'Dataset 2',
+                        data: [5, 12, 15, 10, 18, 22],
+                        borderColor: 'red',
+                        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                        borderWidth: 4,
+                        fill: true,
+                        tension: 0.4,
+                        pointStyle: 'circle',  // Changes data point shape
+                        pointRadius: 6,  // Controls size of data points
+                        pointHoverRadius: 8  // Enlarges on hover
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+</body></html>

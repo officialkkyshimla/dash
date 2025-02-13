@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dash of IPO</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="../css/home.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+    </head>
+    <body>
+        <div id="container">
+            <div id="defaultshow">
+
+            </div>
+            <div id="mycontainer">
+                <div id="menu">
+                    <div id="fmenu">
+                        <p><img src=""/><a href="#ac">Active Clients</a></p>
+                        <p><img src=""/><a href="#chr">Charges</a></p>
+                        <p><img src=""><a href="#cmp">Complaints</a></p>
+                        <p><img src=""/><a href="#sr">Share Holding</a></p>
+                        <p><img src=""/><a href="#pc">Pros & Cons</a></p>
+                        <p><img src=""/><a href="#rating">Ratings</a></p>
+                        <p><img src=""/><a href="#finc">Financials</a></p>
+                    </div>
+                    <div id="smenu">
+                        <p id="smenuf"><img src=""></p>
+                        <p id="smenuvs">vs</p>
+                        <p id="smenut"></p>
+                    </div>
+                </div>
+                    <h2 id="ac">Active Clients</h2>
+                    <canvas id="act"></canvas>
+                    <script>
+                        let ctx=document.getElementById('act').getContext('2d');
+                        const flow=new Chart(ctx,{type:'line',data:{labels:[2020,2021,2022,2023,2024,2025],datasets:[{label:'Angel One',data:[0,100,142,300,350,450],borderColor:'green',fill:true,tension:0.4,borderWidth:10,pointStyle: 'circle',pointRadius: 6,pointHoverRadius: 8},{label:'Zerotha',data:[0,100,242,200,150,250],borderColor:'red',fill:true,tension:0.4,borderWidth:10,pointStyle: 'circle',pointRadius: 6,pointHoverRadius: 8}]},options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',  // Move legend to bottom
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+                    </script>
+                    <h2 id="chr">Account Opening and Maintainance Charges</h2>
+                    <table id="charges">
+                        <tr>
+                            <th>Charges</th>
+                            <th>Angel One</th>
+                            <th>Zerodha</th>
+                        </tr>
+                        <tr>
+                            <td>Account opening charges</td>
+                            <td>0</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Account Maintainance Charges</td>
+                            <td>&#8377;0 for the first year then &#8377;23.6/month</td>
+                            <td>&#8377;300 per year</td>
+                        </tr>
+                    </table>
+                <h2 id="bkr">Brokerage Charges</h2>
+                <table id="Brokerage">
+                    <tr>
+                        <th>Brokerage Charges</th>
+                        <th>Angel One</th>
+                        <th>Zerodha</th>
+                    </tr>
+                    <tr>
+                        <td>Intraday</td>
+                        <td>&#8377;20 or 0.25% &#40;Whichever is lower&#41;</td>
+                        <td>&#8377;20 or 0.03% / executed order whichever is lower</td>
+                    </tr>
+                    <tr>
+                        <td>Futures</td>
+                        <td>&#8377;20 or 0.25% &#40;Whichever is lower&#41;</td>
+                        <td>&#8377;20 or 0.03% / executed order whichever is lower</td>
+                    </tr>
+                    <tr>
+                        <td>Options</td>
+                        <td>&#8377;20 or 0.25% &#40;Whichever is lower&#41;</td>
+                        <td>&#8377;20 executed order &#40;onTurnover&#41;</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery</td>
+                        <td>Zero</td>
+                        <td>Zero</td>
+                    </tr>
+                </table>
+                <h2 id="bkrc">Brokerage Charges</h2>
+                <canvas id="brkchr"></canvas>
+                <h2 id="cmp">Complaints</h2>
+                <canvas id="complain">
+
+                </canvas>
+                <h2 id="sr">Share holding</h2>
+                <canvas id="shrhld"></canvas>
+                <h2 id="pc">Pros & Cons</h2>
+                <table id="pca">
+                    <tr>
+                        <th colspan="2">Pros</th>
+                        <th colspan="2"><img src="../../src/Untitled-removebg-preview.png" id="aimg"/></th>
+                        <th colspan="2">Cons</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Angel One charges zero account opening charges as well as zero annual maintainance charges for only the first year</td>
+                        <td colspan="3">call and trade fee is charged at an extra Rs 20 per executed order</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Zero brokerage charges for equity delivery and remaining segments like intraday and F&O which is flat RS. 20 per trade</td>
+                        <td colspan="3">User interface is a bit complex as it is not for beginners</td>
+                    </tr>
+                </table>
+               <table id="pcz">
+                    <tr>
+                        <th colspan="2">Pros</th>
+                        <th colspan="2"><img id="zimg" src="../../src/images-removebg-preview.png"></th>
+                        <th colspan="2">Cons</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">You don't pay brokerage when you buy shares using cash-and-carry&#40;CNC&#41;. Delivery trade has no leverage. Once bought, shares get delivered to your demat account and if sold, shares will get debiated from your demat account.</td>
+                        <td colspan="3">Doesn't provide stock tips,research reports or recommendations.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">They offer services under a simple pricing model. They charges 0.03% or Rs.20 per executed order, whichever is lower,regardless of the trade size. The maximum brokerage paid by customer is Rs 20 per trade</td>
+                        <td colspan="3">Lifetime free AMC demat account plans are not available.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Zerodha is a seld-clearing broker. They don't charge clearing charges from customer.</td>
+                        <td colspan="3">An additional charge of Rs 50 per executed order for MIS/BO/COpostions which are not square off by the customer.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Set long-standing stop loss and target order for your stock investments.</td>
+                        <td colspan="3">Call & Trade is available at an additional fee of Rs 50 per executedorder.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">An all-new mobile app built for both,passive investors and active day traders, with significant speed anuser experience enhancements.</td>
+                        <td colspan="3">3-in-1 trading account is not available as Zerodha doesn't provide banking services.</td>
+                    
+                    </tr>
+                </table>
+                <h2 id="rating">Rating</h2>
+                <canvas id="rate"></canvas>
+                <h2 id="finc">Financials</h2>
+                <canvas id="Financials"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
