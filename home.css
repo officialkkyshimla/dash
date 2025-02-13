@@ -1,0 +1,28 @@
+body{box-sizing: border-box;}
+@media screen and (min-width:1024px) {
+#container{display: block;}
+#defaultshow{display: block;} 
+#mycontent{display: block;}
+#menu{display: grid;grid-template-columns: 30% 70%; height:400px; position: relative;} 
+#fmenu a{color: rgb(53, 102, 165); text-decoration: none;}
+th{background-color: rgb(15, 15, 218);color: white;height: 50px;}
+td,table{border: 1px solid;border-collapse: collapse;height: 50px;}
+#pca th{background-color: bisque;color: rgb(39, 162, 233);}
+#pcz th{background-color: bisque;color: rgb(39, 162, 233)}
+#pca {margin-bottom: 100px;}
+#smenuvs{width: 20px;height:20px;border: 1px solid black;background-color: black;color: white;border-radius: 15px;padding: 5px;}
+#charges{display: block;margin: 5vw;}
+#charges th{text-align: center;width:30vw;}
+#charges td{text-align: center;}
+#Brokerage{display: block;margin: 5vw;}
+#bkr{margin-top: 200px;}
+#Brokerage th,td{text-align: center;width: 30vw;}
+#bkrc{margin-top: 300px;}
+#pca{display: block;border-color: transparent;margin-bottom: 250px;}
+#pca th{font-size:30px;width: 50vw;}
+#aimg{height: 100px;}
+#pcz{display: block;border-color: transparent;margin-bottom: 400px;}
+#pcz th{font-size: 30px;width: 50vw;}
+#zimg{height: 100px;}
+
+}
