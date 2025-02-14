@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard of IPO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="./dash.css" rel="stylesheet"><!--this is used for external css-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!--this used for graph-->
+        <script src="./dash.js"></script><!--this used for external-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--this is external stylesheet for font and icon-->
+    </head>
+    <body>
+        <div id="maincontainer"><!--this is global container part-->
+            <div id="mycontainer"><!--this is used only dash-->
+                <div id="sidebar"> <!--this is menu or shortcut of pages-->
+                    <div id="menu"><!--here import icons and class upload icons-->
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Active Clients</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Charges</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Complaints</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Share Holding</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Pros & Cons</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Rating</a></p>
+                        <p><img src="./chart-pie-solid.svg"/><a href="">Financials</a></p>
+                        <!--add local or link of source imgage icon-->
+                    </div><!--navigation end-->
+                    <div id="display">
+                        <div id="rater">
+                            <img src="../../src/Untitled-removebg-preview.png"/>
+                            <strong>Angel One</strong>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half-full"></span>
+                            <strong id="s1">4.7</strong>
+                            <a id="a1"href="https://www.angelone.in/open-demat-account">Open Demat Account</a>
+                        </div>
+                        <div id="onlytext"><p>Vs</p></div>
+                        <div id="rater">
+                            <div id="div1">
+                                <img src="../../src/images-removebg-preview.png"/>
+                                <strong>Zerodha</strong>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half-full"></span>
+                                <strong id="s1">4.6</strong>
+                                <a id="a1" href="https://www.angelone.in/open-demat-account">Open Demat Account</a>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="act">Active Clients</h2>
+                <canvas id="actcli"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
